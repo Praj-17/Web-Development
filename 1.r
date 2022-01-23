@@ -1,0 +1,7 @@
+plot(dnorm, from= -3 ,to= 3)
+c(2, 7, 8, 12, 3, 25)
+seq(from =2, to =50, by = 2)
+a = c(2:5)
+mode(a)
+a = c(34,5,6,67,8,9,0)
+(a[3])

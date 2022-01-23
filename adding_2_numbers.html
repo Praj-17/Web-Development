@@ -1,0 +1,52 @@
+<!--Add two integer numbers using JavaScript.-->
+
+<html>
+   <head>
+      <title>Add two integer numbers using JavaScript.</title>
+      <script type="text/javascript">
+         function addTwoNumbers(n1, n2)
+		 {
+         	var x=document.getElementById(n1).value;
+         	var y=document.getElementById(n2).value;
+         	var sum=0;
+         	sum=Number(x)+Number(y);
+         	alert("SUM is: " + sum);
+         }
+         function subTwoNumbers(n1, n2)
+		 {
+         	var x=document.getElementById(n1).value;
+         	var y=document.getElementById(n2).value;
+         	var sum=0;
+         	sum=Number(x)-Number(y);
+         	alert("SUM is: " + sum);
+         }
+         function mulTwoNumbers(n1, n2)
+		 {
+         	var x=document.getElementById(n1).value;
+         	var y=document.getElementById(n2).value;
+         	var sum=0;
+         	sum=Number(x)*Number(y);
+         	alert("SUM is: " + sum);
+         }
+         function divTwoNumbers(n1, n2)
+		 {
+         	var x=document.getElementById(n1).value;
+         	var y=document.getElementById(n2).value;
+         	var sum=0;
+         	sum=Number(x)/Number(y);
+         	alert("SUM is: " + sum);
+         }
+      </script>
+   </head>
+   <body>
+      <h1>Add two integer numbers using JavaScript.</h1>
+      <b>Enter first Number: </b><br>
+      <input type="text" id="n1"/><br>
+      <b>Enter second Number: </b><br>
+      <input type="text" id="n2"/><br><br>
+      <input type="button" id="btnSum" value="Calculate SUM" onClick="addTwoNumbers('n1','n2')"/>
+      <input type="button" id="btnSum" value="Calculate DIFF" onClick="subTwoNumbers('n1','n2')"/>
+      <input type="button" id="btnSum" value="Calculate Multiplication" onClick="mulTwoNumbers('n1','n2')"/>
+      <input type="button" id="btnSum" value="Calculate Division" onClick="divTwoNumbers('n1','n2')"/>
+   </body>
+</html>

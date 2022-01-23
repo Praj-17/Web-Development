@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+</head>
+<body>
+    <h1>This is HTML Forms Tutorial</h1>
+    <form action="Backend.php">
+        <!-- The Main tag helps us to take the data to the Backend -->
+        <label for="name"> Name</label>
+        <!-- The lable tag will allow the user to click on  the given name (here Name) and it will automatically select the input box of that particular attribute
+        <div> -->
+           <input type = "text" name = "myname" id = "name"> ><br>  
+        </div><br>  
+        <!--  Br is not recommenede here though -->
+        <div>
+            Roll No :  <input type = "text" name = "myRoll" >
+        </div>
+        </div><br>  
+        <!--  Br is not recommenede here though -->
+        <div>
+            Email :  <input type = "text" name = "myEmail">
+        </div>
+        <div>
+           Date  <input type = "datetime" name = "mydate">
+        </div>
+        <div>
+           Are you eligible <input type = "checkbox" name = "myeligibility" checked>
+        </div> 
+        <div>
+            <!-- You cannot select more than 1 value here since your name is same, and hence it makes sense, if you want to choose more than one choic in a radion buttion change the name of each individuall -->
+            Gender: male<input type = "radio" name = "mygender">
+            Female<input type = "radio" name = "mygender">
+            Other <input type = "radio" name = "mygender" checked>
+        </div><br>
+
+        <div>
+           Write about yourself:<br> 
+           <textarea name = "mytext" cols="50", rows = "5"> </textarea>
+        </div>
+        <div>
+            <label for="car">Car</label>
+            <select name="mycar" id="car">
+            <option value="indica">Indica</option>
+            <option value="swift">Swift</option></select>
+        </div>
+        <div>
+            <input type = "Submit" value = "Submit Now">
+        </div><br>
+        
+     
+    </form>
+    
+</body>
+</html>
