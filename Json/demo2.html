@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1 id="header1">    </h1>
+<script type="text/javascript">
+function myFunction(arr) {
+  var out = "";
+  var i;
+  for(i = 0; i<arr.length; i++) {
+    out += arr[i].Book + '      ' +  arr[i].Author + '<br>';
+  }
+  document.getElementById("header1").innerHTML = out;
+}
+</script>
+<script src="demo2.json">
+</script>
+</body>
+</html>

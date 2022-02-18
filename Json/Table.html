@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    
+    <!-- INCLUDING JQUERY-->
+    <script src= "https://code.jquery.com/jquery-3.5.1.js"> </script>
+
+<style>
+  table {
+      margin: 0 auto;
+      font-size: large;
+      border: 1px solid black;
+  }
+  td {
+            background-color: #E4F5D4;
+            border: 1px solid black;
+        }
+  
+        th,
+        td {
+            font-weight: bold;
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+        }
+  </style>
+</head>
+
+<body>
+  <h1> Accessing Json data using JQuery </h1>
+  <table id='table1'>
+    <!-- HEADING FORMATION -->
+    <tr>
+        <th>Book</th>
+        <th>Author</th>
+    </tr>
+
+ <script>
+            $(document).ready(function () {
+  
+                // FETCHING DATA FROM JSON FILE
+             $.getJSON("JasonBookTable.json", 
+                            function (data) {
+                        var tableRow = '';
+
+                        // <tr>
+                        //  <td> Content </td>
+                        // </tr>
+  
+                        // ITERATING THROUGH OBJECTS
+                        $.each(data, function (key, value) {
+  
+                            //CONSTRUCTION OF ROWS HAVING
+                            // DATA FROM JSON OBJECT
+                            tableRow += '<tr>';
+
+                            tableRow += '<td>' + 
+                                value.Book + '</td>';
+  
+                            tableRow += '<td>' + 
+                                value.Author + '</td>';
+  
+                             
+                            tableRow += '</tr>';
+                        });
+                          
+                        //INSERTING ROWS INTO TABLE 
+                        $('#table1').append(tableRow);
+                    });
+                });
+            </script>
+</table>
+
+</body>
+  
+</html>

@@ -1,0 +1,14 @@
+myFunction([
+    {
+    "Book": "Book1",
+    "Author": "Author1"
+    },
+    {
+    "Book": "Book2",
+    "Author": "Author2"
+    },
+    {
+    "Book": "Book3",
+    "Author": "Author3"
+    }
+    ]);
