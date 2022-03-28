@@ -1,0 +1,6 @@
+Step 1 Install Mongo DB
+Step 2 install driver using following command
+C:\Users\Your Name>npm install mongodb --save
+Step 3 Start server using following command
+mongod -dbpath C:\MyNodeJSConsoleApp\MyMongoDB
+step 4- run the code given in the file connection.js from the command promt,

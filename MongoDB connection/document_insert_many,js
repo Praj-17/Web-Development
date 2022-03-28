@@ -1,0 +1,25 @@
+// -------
+// code to insert one row/document in collection
+// -----------------
+var MongoClient = require('mongodb').MongoClient;
+var url = "mongodb://localhost:27017/";
+
+MongoClient.connect(url, function(err, db) {
+  if (err) throw err;
+  var dbo = db.db("mydb");
+  var myobj =[ { name: "Company Inc", address: "Highway 37" },
+    { name: "Prajwal", address: "Parbhani" },
+    { name: "BSE", address: "Bomabay" },
+    { name: "NSE", address: "Bombay" },
+    { name: "Great wall ", address: "China" },
+    { name: "Taj Mahal", address: "Agra" },
+    { name: "Red fort", address: "Delhi" },
+    { name: "Qutubminar", address: "Delhi" },
+    { name: "Biwi ka maqbara", address: "Aurangabad" },
+    { name: "Something funny", address: "my room" },];
+  dbo.collection("customers").insertMany(myobj, function(err, res) {
+    if (err) throw err;
+    console.log("1 document inserted");
+    db.close();
+  });
+});
