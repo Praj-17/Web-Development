@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script type="text/javascript">
+       
+
+function take_input(v1 , v2) {
+    var company_name = document.getElementById("company_name").value;
+    var address = document.getElementById("address").value;
+    console.log(company_name);
+    console.log(address);
+    
+    return company_name, address;
+  }
+
+  function submit_to_database(){
+//     var MongoClient = require('mongodb').MongoClient;
+// var url = "mongodb://localhost:27017/";
+  company_name, address = take_input();
+  console.log(company_name);
+  console.log(address);
+  var myobj ={};
+  myobj['name'] = company_name;
+  myobj['address'] = address;
+
+  console.log(myobj);
+  
+
+
+// MongoClient.connect(url, function(err, db) {
+    
+//   if (err) throw err;
+//   var dbo = db.db("mydb");
+
+
+//   dbo.collection("customers").insertMany(myobj, function(err, res) {
+//     if (err) throw err;
+//     console.log("1 document inserted");
+//     db.close();
+  };
+// })};
+
+</script>
+
+<body>
+    <h1>Hello.....</h1>
+    <h3>Please provide the required inputs</h3>
+    <form>
+  
+        <!-- We can have various types of inputs like: Email, Plain Text, Date etc. -->
+        <input type="text" id = "company_name" placeholder="Name">
+        <input type="text" id = "address" placeholder="address">
+        <input type="submit" value="Submit" onClick="submit_to_database()">
+      </form>
+</body>
+
+</html>
